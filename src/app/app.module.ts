@@ -14,6 +14,7 @@ import { AcercadeComponent } from './components/acercade/acercade.component';
 import { PetstoreComponent } from './components/petstore/petstore.component';
 import { PotajesComponent } from './components/potajes/potajes.component';
 import { ContactanosComponent } from './components/contactanos/contactanos.component';
+import { NoencontradoComponent } from './components/noencontrado/noencontrado.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ContactanosComponent } from './components/contactanos/contactanos.compo
     AcercadeComponent,
     PetstoreComponent,
     PotajesComponent,
-    ContactanosComponent
+    ContactanosComponent,
+    NoencontradoComponent
   ],
   imports: [
     BrowserModule,
