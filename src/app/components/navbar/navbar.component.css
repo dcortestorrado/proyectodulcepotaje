@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap');
+
+.bg-navbar{
+    background-color: #d7efef;
+}
+
+.container-fluid {
+    font-family: 'Cinzel', serif;
+    font-size: 25px; 
+    font-weight: 500;
+    color: #000000 !important;
+}
+
+.dp-logo{
+    width: 300px;
+}
+
+.no-login{
+    color: rgb(168, 218, 233);
+}
+
+.cart{
+    color: chartreuse;
+}
+
+.navbar-nav{
+    margin: auto;
+}
+
+li {
+    font-size: calc(1rem + 1vw);
+}
+  
+    @media (min-width: 1500px) {
+        .title {
+        font-size: 4rem;
+    }
+}

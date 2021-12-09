@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200&display=swap');
+
+.contenedor-footer, .copy{
+    background-color: #cfe4ab;
+    margin-bottom: 0;
+}
+
+.titulo-potaje{
+    font-family: 'Cinzel', serif;
+}
+
+.subtitulo-potaje, .textos, .horarios, .copy, .redes, .lista-footer{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.subtitulo-potaje{
+    font-size: 12px;
+}
+
+.textos{
+    font-size: 18px;
+}
+
+.horarios, .redes{
+    font-size: 25px;
+}
+
+.copy{
+    font-size: 13px;
+}
+
+.lista-footer {
+    list-style: none;
+    padding-left: 0px;
+    font-size: 18px;
+    font-weight: bold;  
+}
+
+li a, li a:link, li a:hover, li a:active, li a:visited {
+    text-decoration: none;
+    color: #000000;
+}
+
+.lista-footer li a{
+    margin-bottom: 10px;
+    text-decoration: underline 3px transparent;
+    transition: text-decoration 1s;
+    display: inline-block;
+}
+
+li a:hover{
+    text-decoration-color: #000000 !important;
+    cursor: pointer;   
+}
