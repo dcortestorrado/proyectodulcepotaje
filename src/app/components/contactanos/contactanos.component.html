@@ -1,1 +1,39 @@
-<p>contactanos works!</p>
+<!--<input formControlName="nombrecontactanos">, etc...
+    las opciones son las guardadas en el app.module.ts-->
+
+    <div class="row d-flex justify-content-center align-items-center">
+
+        <div class="col-lg-5 col-md-6 col-sm-6 mx-auto">
+    
+            <form [formGroup]="contactanosForm" (ngSubmit)="guardarMensaje()">
+    
+                <div class="mb-5">
+                    <label class="form-label fw-bold">NOMBRE COMPLETO</label>
+                    <input type="text" class="form-control" formControlName="nombreContacto">
+                    <span class="text-danger fw-bold span-font" *ngIf="contactanosForm.get('nombreContacto')?.hasError('required') && contactanosForm.get('nombreContacto')?.touched">Ingresa tu nombre completo.</span> 
+                </div>
+    
+                <div class="mb-5">
+                    <label class="form-label fw-bold">CORREO ELECTRÓNICO</label>
+                    <input type="email" class="form-control" formControlName="correoContacto">
+                    <span class="text-danger fw-bold span-font" *ngIf="contactanosForm.get('correoContacto')?.hasError('required') && contactanosForm.get('correoContacto')?.touched">Ingresa tu correo electrónico.</span>               
+                </div>
+    
+                <div class="mb-5">
+                    <label class="form-label fw-bold">CELULAR</label>
+                    <input type="number" class="form-control" formControlName="telefonoContacto" aria-describedby="PhoneHelp">
+                    <span class="text-danger fw-bold span-font" *ngIf="contactanosForm.get('telefonoContacto')?.hasError('required') && contactanosForm.get('telefonoContacto')?.touched">Ingresa tu celular.</span> 
+                </div>
+                
+                <div class="mb-5">
+                    <label class="form-label fw-bold">TU MENSAJE:</label>
+                    <textarea rows='10' class="form-control" formControlName="mensajeContacto"></textarea>
+                    <span class="text-danger fw-bold span-font" *ngIf="contactanosForm.get('mensajeContacto')?.hasError('required') && contactanosForm.get('mensajeContacto')?.touched">Deja tu mensaje.</span>               
+                </div>
+    
+                <button type="submit" class="btn btn-secondary span-font mb-5 text-center fw-bold" [disabled]="contactanosForm.invalid">ENVIAR</button>
+    
+            </form>       
+        </div>
+    
+    </div>

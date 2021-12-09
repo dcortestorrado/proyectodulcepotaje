@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap');
 
 .bg-navbar{
-    background-color: #d7efef;
+    background-color: #6fcaca;
 }
 
 .container-fluid {
@@ -16,11 +16,11 @@
 }
 
 .no-login{
-    color: rgb(168, 218, 233);
+    color: #6fcaca;
 }
 
 .cart{
-    color: chartreuse;
+    color: #9ecb50;
 }
 
 .navbar-nav{
@@ -30,9 +30,19 @@
 li {
     font-size: calc(1rem + 1vw);
 }
-  
+
     @media (min-width: 1500px) {
         .title {
         font-size: 4rem;
     }
+}
+
+.nav-item{
+    background-color: transparent;
+    /* border-radius: 20px; */
+    transition: background-color 0.5s;
+}
+
+.nav-item:hover{
+    background-color: #d7efef;
 }

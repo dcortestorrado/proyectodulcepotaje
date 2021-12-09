@@ -1,6 +1,6 @@
-<div class="mt-2 mb-5 row d-flex flex-row align-items-center w-100">
+<div class="mt-2 mb-5 row d-flex flex-row justify-content-center align-items-center w-100">
 
-    <div class="d-hidden d-xl-block col-2">
+    <div class="col-xl-2 col-lg-12 d-flex justify-content-center align-items-center">
         <img class="dp-logo img-fluid" src="assets/img/logo.png">
     </div>
     
@@ -18,46 +18,45 @@
                 <ul class="navbar-nav mb-2 mb-lg-0 align-items-center">
 
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" routerLink="">Home</a>
                     </li>
     
                     <li class="nav-item dropdown">
     
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        <a class="nav-link dropdown-toggle" routerLink="potajes" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Potajes
                         </a>
     
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item" href="#">Galletas</a></li>
+                            <li><a class="dropdown-item" href="#">Bocaditos</a></li>
+                            <li><a class="dropdown-item" href="#">Granola y Barras</a></li>
+                            <li><a class="dropdown-item" href="#">Untables</a></li>
+                            <li><a class="dropdown-item" href="#">Otros</a></li>
                         </ul>
     
                     </li>
     
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Acerca de</a>
+                        <a class="nav-link" routerLink="acercade">Acerca de</a>
                     </li>
     
     
                     <li class="nav-item">
-                        <a class="nav-link" href="">Pet Store</a>
+                        <a class="nav-link" routerLink="petstore">Pet Store</a>
                     </li>
     
                     <li class="nav-item">
-                        <a class="nav-link text-start" href="">Contáctanos</a>
+                        <a class="nav-link text-start" routerLink="contactanos">Contáctanos</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link text-start d-inline-block d-xl-none" href="">Mi cuenta</a>
+                        <a class="nav-link text-start d-inline-block d-xl-none" routerLink="login">Mi cuenta</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link text-start d-inline-block d-xl-none" href="">Carrito</a>
+                        <a class="nav-link text-start d-inline-block d-xl-none" routerLink="shopping">Carrito</a>
                     </li>
     
                 </ul>
@@ -70,11 +69,11 @@
 
         <div>
             <!-- <i class="fas fa-user-check"></i> -->
-            <i class="fas fa-user-times no-login fa-3x img-fluid"></i>
+            <a routerLink="login"><i class="fas fa-user-times no-login fa-3x img-fluid"></i></a>
         </div>
 
         <div>
-            <i class="fas fa-shopping-cart cart fa-3x img-fluid"></i>
+            <a routerLink="shopping"><i class="fas fa-shopping-cart cart fa-3x img-fluid"></i></a>
         </div>
 
     </div>
