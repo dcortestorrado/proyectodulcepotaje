@@ -32,7 +32,7 @@ export class ContactanosComponent implements OnInit {
     const CONTACTO: Contactanos = {
 
       nombre: this.contactanosForm.get('nombreContacto')?.value,
-      email: this.contactanosForm.get('correoContacto')?.value,
+      correo: this.contactanosForm.get('correoContacto')?.value,
       telefono: this.contactanosForm.get('telefonoContacto')?.value,
       mensaje: this.contactanosForm.get('mensajeContacto')?.value
     }

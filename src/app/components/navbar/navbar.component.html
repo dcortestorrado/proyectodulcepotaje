@@ -1,4 +1,4 @@
-<div class="mt-2 mb-5 row d-flex flex-row justify-content-center align-items-center w-100">
+<div class="mt-2 mb-5 row justify-content-center align-items-center w-100">
 
     <div class="col-xl-2 col-lg-12 d-flex justify-content-center align-items-center">
         <img class="dp-logo img-fluid" src="assets/img/logo.png">
@@ -20,22 +20,9 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" routerLink="">Home</a>
                     </li>
-    
-                    <li class="nav-item dropdown">
-    
-                        <a class="nav-link dropdown-toggle" routerLink="potajes" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Potajes
-                        </a>
-    
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Galletas</a></li>
-                            <li><a class="dropdown-item" href="#">Bocaditos</a></li>
-                            <li><a class="dropdown-item" href="#">Granola y Barras</a></li>
-                            <li><a class="dropdown-item" href="#">Untables</a></li>
-                            <li><a class="dropdown-item" href="#">Otros</a></li>
-                        </ul>
-    
+
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="potajes">Potajes</a>
                     </li>
     
                     <li class="nav-item">
@@ -68,12 +55,12 @@
     <div class="col-2 d-none d-xl-flex flex-row justify-content-evenly">
 
         <div>
-            <!-- <i class="fas fa-user-check"></i> -->
-            <a routerLink="login"><i class="fas fa-user-times no-login fa-3x img-fluid"></i></a>
+            <!-- <i class="fas fa-user-check fa-3x img-fluid"></i> -->
+            <a routerLink="login" #nologin><i class="fas fa-user-times no-login fa-3x"></i></a>
         </div>
 
         <div>
-            <a routerLink="shopping"><i class="fas fa-shopping-cart cart fa-3x img-fluid"></i></a>
+            <a routerLink="shopping"><i class="fas fa-shopping-cart cart fa-3x"></i></a>
         </div>
 
     </div>

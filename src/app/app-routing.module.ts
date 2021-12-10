@@ -21,7 +21,7 @@ const routes: Routes = [
   {path: 'crear', component: CrearcuentaComponent},
   {path: 'contactanos', component: ContactanosComponent},
   {path: 'acercade', component: AcercadeComponent},
-  {path: 'carrito', component: ShoppingComponent},
+  {path: 'shopping', component: ShoppingComponent},
   {path: '404', component: NoencontradoComponent},
   {path: '**', redirectTo: '404', pathMatch: 'full'}
 ];

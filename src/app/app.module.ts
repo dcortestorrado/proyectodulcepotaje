@@ -31,7 +31,7 @@ import { NoencontradoComponent } from './components/noencontrado/noencontrado.co
     PetstoreComponent,
     PotajesComponent,
     ContactanosComponent,
-    NoencontradoComponent,
+    NoencontradoComponent
   ],
   imports: [
     BrowserModule,

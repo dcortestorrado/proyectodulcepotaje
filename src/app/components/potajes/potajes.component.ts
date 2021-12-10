@@ -12,4 +12,14 @@ export class PotajesComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  scrollToElement(elemento: any){
+    // console.log(elemento);
+    elemento.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest"
+
+    }) //Salta a alias, asignados en el HTML
+  }
+
 }

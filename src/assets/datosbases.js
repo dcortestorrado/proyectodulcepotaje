@@ -1,24 +1,30 @@
 //Galletas
 
 // {
-// 	"nombre_producto": ,
-// 	"categoria": ,
-// 	"presentaciones": ["Pequeñas x 10", "Medianas x 8"],
-//     "cantidad_1": ,
-//     "cantidad_2": ,
-// 	"precio_1": ,
-// 	"precio_2": 
-// }
+//     "nombre_producto": "Avenana",
+//     "categoria": "Galletas",
+// 	"ramas": "Potajes"
+//     "inventario": {
+//         			"data_producto": [
+//         			    {"presentacion": "Pequeñas x 10", "precio": 6500, "cantidad": 120},
+//         			    {"presentacion": "Medianas x 8", "precio": 8500, "cantidad": 150}
+//         			]
+//     			}
+// },
 
 {
-	"nombre_producto": "Avenana",
-	"categoria": "Galletas",
-	"presentaciones": ["Pequeñas x 10", "Medianas x 8"],
-    "cantidad_1": 120,
-    "cantidad_2": 150,
-	"precio_1": 6500,
-	"precio_2": 8500
+    "nombre_producto": "Avenana",
+    "categoria": "Galletas",
+	"ramas": "Potajes"
+    "inventario": {
+        			"data_producto": [
+        			    {"presentacion": "Pequeñas x 10", "precio": 6500, "cantidad": 120},
+        			    {"presentacion": "Medianas x 8", "precio": 8500, "cantidad": 150}
+        			]
+    			}
 },
+
+
 
 {
 	"nombre_producto": "Vainilla",
@@ -74,12 +80,17 @@
 //Bocaditos
 
 // {
-// 	"nombre_producto": ,
-// 	"categoria": "Bocaditos",
-// 	"presentaciones": " x 10",
-//     "cantidad": ,
-// 	"precio": 	
+//     "nombre_producto": "Avenana",
+//     "categoria": "Galletas",
+//     "inventario": [{
+//         "data_producto": [
+//             {"presentacion": "Pequeñas x 10", "precio": 6500, "cantidad": 120},
+//             {"presentacion": "Pequeñas x 10", "precio": 6500, "cantidad": 120}
+//         ]
+//     }]
 // }
+
+
 
 {
 	"nombre_producto": "Cacao",
@@ -208,6 +219,18 @@
 
 //Pet Store
 
+// {
+//     "nombre_producto": "Avenana",
+//     "rama": "Pet Shop",
+//     "categoria": "Galletas",
+//     "inventario": [{
+//         "data_producto": [
+//             {"presentacion": "Pequeñas x 10", "precio": 6500, "cantidad": 120},
+//             {"presentacion": "Pequeñas x 10", "precio": 6500, "cantidad": 120}
+//         ]
+//     }]
+// }
+
 {
     "nombre_producto": "Arena Sanitaria",
     "categoria": "Arenas",
@@ -230,4 +253,12 @@
     "precio_2": 49500
 }
 
+//Contacto
+
+// {
+// 	"nombre": ,
+// 	"correo": ,
+// 	"telefono": ,
+// 	"mensaje":
+// }
 
