@@ -26,3 +26,26 @@
     font-size: 35px;
 }
 
+.fa-minus, .fa-plus{
+    color: #6fcaca;
+}
+
+li, a, h5{
+    font-family: 'Montserrat', sans-serif;
+}
+
+li{
+    text-decoration: transparent 2px;
+    transition: all 500ms;
+}
+
+li:hover{
+    text-decoration: underline 2px #9ecb50;
+    cursor: pointer;
+}
+
+.descripciones{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    text-align: justify;
+}

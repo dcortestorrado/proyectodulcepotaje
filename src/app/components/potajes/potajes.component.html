@@ -1,44 +1,425 @@
-<div class="d-flex justify-content-center align-items-center">
-    <button class="btn btn-secondary" (click)="scrollToElement(galletas)">Galletas</button>
-    <button class="btn btn-secondary" (click)="scrollToElement(bocaditos)">Bocaditos</button>
-    <button class="btn btn-secondary" (click)="scrollToElement(granolas)">Granolas</button>
-    <button class="btn btn-secondary" (click)="scrollToElement(untables)">Untables</button>
-    <button class="btn btn-secondary" (click)="scrollToElement(otros)">Otros</button>
+<div class="d-flex row mb-5 justify-content-center">
+
+    <button class="btn btn-secondary m-2 col-xl-1 col-md-2 col-9 botones-scroll" (click)="scrollToElement(galletas)">GALLETAS</button>
+
+    <button class="btn btn-secondary m-2 col-xl-1 col-md-2 col-9 botones-scroll" (click)="scrollToElement(bocaditos)">BOCADITOS</button>
+
+    <button class="btn btn-secondary m-2 col-xl-1 col-md-2 col-9 botones-scroll" (click)="scrollToElement(granolas)">GRANOLAS</button>
+
+    <button class="btn btn-secondary m-2 col-xl-1 col-md-2 col-9 botones-scroll" (click)="scrollToElement(untables)">UNTABLES</button>
+
+    <button class="btn btn-secondary m-2 col-xl-1 col-md-2 col-9 botones-scroll" (click)="scrollToElement(otros)">OTROS</button>
 </div>
 
+<!-- GALLETAS -->
 <div class="divs-principales">
     <h2 class="titulos ms-4 mb-4" #galletas>Galletas</h2>
-    <p class="parrafos">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Quisquam placeat porro voluptas accusantium obcaecati. At nesciunt, voluptatem incidunt exercitationem temporibus molestias, id quas vitae quae debitis laudantium voluptas aperiam soluta facere omnis commodi mollitia, quis laboriosam adipisci magni. Adipisci voluptatem, rem ex sequi tenetur error corporis sunt officiis temporibus sed nisi ipsa est consectetur beatae nobis, voluptate similique sint quae veritatis architecto exercitationem fuga commodi? Rerum, dolore. Nobis tempora nihil sequi possimus esse dicta quia dolorum vel fugit ex. Minima, rem libero et odit quam qui id consequatur sed cum eius inventore deserunt fugit, commodi culpa praesentium. Nihil quibusdam praesentium maxime sint cumque. Deserunt, velit minus praesentium soluta debitis natus ipsa perferendis sed eaque illo odit deleniti totam aperiam perspiciatis cumque sequi necessitatibus enim maiores quasi facere aut. Perspiciatis, quas ullam? Harum ratione ex et tempora labore adipisci repudiandae nihil laboriosam. Ab explicabo odit nesciunt consequuntur tempora illo culpa voluptates quibusdam impedit, facere, quas vel doloribus accusamus alias vitae hic animi omnis, optio deleniti aliquam eius a illum officia! Nesciunt impedit dolores, possimus ipsa, sunt a cum ut vero explicabo, dolor velit dolorum? Sed eligendi nisi officiis atque ducimus iusto? Libero aliquid eveniet soluta natus dolores. Dicta doloremque laudantium quam!
-    </p>
 </div>
 
+<div class="divs-principales row justify-content-around mb-5">
+
+    <div class="card col-xl-3 col-lg-5 col-8 mb-3">
+
+        <img src="" class="card-img-top" alt="Avenanas" #imagenavenanas>
+        <div class="card-body">
+            <h5 class="card-title fw-bold">Avenanas</h5>
+            <p class="card-text">Galletas de avena, banano y canela</p>
+        </div>
+
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item" #pavenanas1>Presentación 1:</li>
+            <li class="list-group-item" #pavenanas2>Presentación 2:</li>
+            <li class="list-group-item" #precioavenanas>Precio: </li>
+        </ul>
+
+        <div class="d-flex flex-row justify-content-center align-items-center">
+            <ul class="list-group list-group-horizontal">
+                <li class="list-group-item"><i class="fas fa-minus fa-lg"></i></li>
+                <li class="list-group-item"><i class="fas fa-plus fa-lg"></i></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card col-xl-3 col-lg-5 col-8 mb-3">
+
+        <img class="card-img-top" alt="Banani" #imagenbanani>
+        <div class="card-body">
+            <h5 class="card-title fw-bold">Bananí</h5>
+            <p class="card-text">Galletas de avena, banano y mantequilla de maní</p>
+        </div>
+
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item" #pbanani1>Presentación 1:</li>
+            <li class="list-group-item" #pbanani2>Presentación 2:</li>
+            <li class="list-group-item" #preciobanani>Precio: </li>
+        </ul>
+
+        <div class="d-flex flex-row justify-content-center align-items-center">
+            <ul class="list-group list-group-horizontal">
+                <li class="list-group-item"><i class="fas fa-minus fa-lg"></i></li>
+                <li class="list-group-item"><i class="fas fa-plus fa-lg"></i></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card col-xl-3 col-lg-5 col-8 mb-3">
+
+        <img class="card-img-top" alt="Browneta" #imagenbrowneta>
+        <div class="card-body">
+            <h5 class="card-title fw-bold">Browneta</h5>
+            <p class="card-text">Galletas de cacao, harina de avena, huevo de linaza y stevia</p>
+        </div>
+
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item" #pbrowneta1>Presentación 1:</li>
+            <li class="list-group-item" #pbrowneta2>Presentación 2:</li>
+            <li class="list-group-item" #preciocobrowneta>Precio: </li>
+        </ul>
+
+        <div class="d-flex flex-row justify-content-center align-items-center">
+            <ul class="list-group list-group-horizontal">
+                <li class="list-group-item"><i class="fas fa-minus fa-lg"></i></li>
+                <li class="list-group-item"><i class="fas fa-plus fa-lg"></i></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<div class="divs-principales row justify-content-around mb-5">
+
+    <div class="card col-xl-3 col-lg-5 col-8 mb-3">
+
+        <img class="card-img-top" alt="Cobana" #imagencobana>
+        <div class="card-body">
+            <h5 class="card-title fw-bold">Cobana</h5>
+            <p class="card-text">Galletas de coco y banano</p>
+        </div>
+
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item" #pcobana1>Presentación 1:</li>
+            <li class="list-group-item" #pcobana2>Presentación 2:</li>
+            <li class="list-group-item" #preciocobana>Precio: </li>
+        </ul>
+
+        <div class="d-flex flex-row justify-content-center align-items-center">
+            <ul class="list-group list-group-horizontal">
+                <li class="list-group-item"><i class="fas fa-minus fa-lg"></i></li>
+                <li class="list-group-item"><i class="fas fa-plus fa-lg"></i></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card col-xl-3 col-lg-5 col-8 mb-3">
+
+        <img class="card-img-top" alt="Miel" #imagenmiel>
+        <div class="card-body">
+            <h5 class="card-title fw-bold">Miel</h5>
+            <p class="card-text">Galletas de avena, banano y miel</p>
+        </div>
+
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item" #pmiel1>Presentación 1:</li>
+            <li class="list-group-item" #pmiel2>Presentación 2:</li>
+            <li class="list-group-item" #preciomiel>Precio: </li>
+        </ul>
+
+        <div class="d-flex flex-row justify-content-center align-items-center">
+            <ul class="list-group list-group-horizontal">
+                <li class="list-group-item"><i class="fas fa-minus fa-lg"></i></li>
+                <li class="list-group-item"><i class="fas fa-plus fa-lg"></i></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card col-xl-3 col-lg-5 col-8 mb-3">
+
+        <img class="card-img-top" alt="Vainilla" #imagenvainilla>
+        <div class="card-body">
+            <h5 class="card-title fw-bold">Vainilla</h5>
+            <p class="card-text">Galletas de vainilla, harina de trigo, huevo de linaza y stevia</p>
+        </div>
+
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item" #pvainilla1>Presentación 1:</li>
+            <li class="list-group-item" #pvainilla2>Presentación 2:</li>
+            <li class="list-group-item" #preciovainilla>Precio: </li>
+        </ul>
+
+        <div class="d-flex flex-row justify-content-center align-items-center">
+            <ul class="list-group list-group-horizontal">
+                <li class="list-group-item"><i class="fas fa-minus fa-lg"></i></li>
+                <li class="list-group-item"><i class="fas fa-plus fa-lg"></i></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<!-- BOCADITOS -->
 <div class="divs-principales">
     <h2 class="titulos ms-4 mt-2 mb-4" #bocaditos>Bocaditos</h2>
-    <p class="parrafos">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Quisquam placeat porro voluptas accusantium obcaecati. At nesciunt, voluptatem incidunt exercitationem temporibus molestias, id quas vitae quae debitis laudantium voluptas aperiam soluta facere omnis commodi mollitia, quis laboriosam adipisci magni. Adipisci voluptatem, rem ex sequi tenetur error corporis sunt officiis temporibus sed nisi ipsa est consectetur beatae nobis, voluptate similique sint quae veritatis architecto exercitationem fuga commodi? Rerum, dolore. Nobis tempora nihil sequi possimus esse dicta quia dolorum vel fugit ex. Minima, rem libero et odit quam qui id consequatur sed cum eius inventore deserunt fugit, commodi culpa praesentium. Nihil quibusdam praesentium maxime sint cumque. Deserunt, velit minus praesentium soluta debitis natus ipsa perferendis sed eaque illo odit deleniti totam aperiam perspiciatis cumque sequi necessitatibus enim maiores quasi facere aut. Perspiciatis, quas ullam? Harum ratione ex et tempora labore adipisci repudiandae nihil laboriosam. Ab explicabo odit nesciunt consequuntur tempora illo culpa voluptates quibusdam impedit, facere, quas vel doloribus accusamus alias vitae hic animi omnis, optio deleniti aliquam eius a illum officia! Nesciunt impedit dolores, possimus ipsa, sunt a cum ut vero explicabo, dolor velit dolorum? Sed eligendi nisi officiis atque ducimus iusto? Libero aliquid eveniet soluta natus dolores. Dicta doloremque laudantium quam!
-    </p>
 </div>
 
+<div class="divs-principales row justify-content-around mb-5">
+    <div class="card col-xl-3 col-lg-5 col-8 mb-3">
+
+        <img src="" class="card-img-top" alt="Avenanos" #imagenavenanos>
+        <div class="card-body">
+            <h5 class="card-title">Avenanos</h5>
+            <p class="card-text">Bocaditos de avena, banano, miel y chía</p>
+        </div>
+
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item" #pavenanos1>Presentación 1:</li>
+            <li class="list-group-item" #pavenanos2>Presentación 2:</li>
+            <li class="list-group-item" #precioavenanos>Precio: </li>
+        </ul>
+
+        <div class="d-flex flex-row justify-content-center align-items-center">
+            <ul class="list-group list-group-horizontal">
+                <li class="list-group-item"><i class="fas fa-minus fa-lg"></i></li>
+                <li class="list-group-item"><i class="fas fa-plus fa-lg"></i></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card col-xl-3 col-lg-5 col-8 mb-3">
+
+        <img src="" class="card-img-top" alt="Imagen cacao" #imagencacao>
+        <div class="card-body">
+            <h5 class="card-title">Cacao</h5>
+            <p class="card-text">Bocaditos de cacao, uvas pasas y maní</p>
+        </div>
+
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item" #pcacao1>Presentación 1:</li>
+            <li class="list-group-item" #pcacao2>Presentación 2:</li>
+            <li class="list-group-item" #preciocacao>Precio: </li>
+        </ul>
+
+        <div class="d-flex flex-row justify-content-center align-items-center">
+            <ul class="list-group list-group-horizontal">
+                <li class="list-group-item"><i class="fas fa-minus fa-lg"></i></li>
+                <li class="list-group-item"><i class="fas fa-plus fa-lg"></i></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card col-xl-3 col-lg-5 col-8 mb-3">
+
+        <img src="" class="card-img-top" alt="Imagen maniel" #imagenmaniel>
+        <div class="card-body">
+            <h5 class="card-title">Maniel</h5>
+            <p class="card-text">Bocaditos de miel, mantequilla de maní y harina de avena</p>
+        </div>
+
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item" #pmaniel1>Presentación 1:</li>
+            <li class="list-group-item" #pmaniel2>Presentación 2:</li>
+            <li class="list-group-item" #preciomaniel>Precio: </li>
+        </ul>
+
+        <div class="d-flex flex-row justify-content-center align-items-center">
+            <ul class="list-group list-group-horizontal">
+                <li class="list-group-item"><i class="fas fa-minus fa-lg"></i></li>
+                <li class="list-group-item"><i class="fas fa-plus fa-lg"></i></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<!-- GRANOLAS Y BARRAS -->
 <div class="divs-principales">
     <h2 class="titulos ms-4 mb-4" #granolas>Granolas y barras</h2>
-    <p class="parrafos">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Quisquam placeat porro voluptas accusantium obcaecati. At nesciunt, voluptatem incidunt exercitationem temporibus molestias, id quas vitae quae debitis laudantium voluptas aperiam soluta facere omnis commodi mollitia, quis laboriosam adipisci magni. Adipisci voluptatem, rem ex sequi tenetur error corporis sunt officiis temporibus sed nisi ipsa est consectetur beatae nobis, voluptate similique sint quae veritatis architecto exercitationem fuga commodi? Rerum, dolore. Nobis tempora nihil sequi possimus esse dicta quia dolorum vel fugit ex. Minima, rem libero et odit quam qui id consequatur sed cum eius inventore deserunt fugit, commodi culpa praesentium. Nihil quibusdam praesentium maxime sint cumque. Deserunt, velit minus praesentium soluta debitis natus ipsa perferendis sed eaque illo odit deleniti totam aperiam perspiciatis cumque sequi necessitatibus enim maiores quasi facere aut. Perspiciatis, quas ullam? Harum ratione ex et tempora labore adipisci repudiandae nihil laboriosam. Ab explicabo odit nesciunt consequuntur tempora illo culpa voluptates quibusdam impedit, facere, quas vel doloribus accusamus alias vitae hic animi omnis, optio deleniti aliquam eius a illum officia! Nesciunt impedit dolores, possimus ipsa, sunt a cum ut vero explicabo, dolor velit dolorum? Sed eligendi nisi officiis atque ducimus iusto? Libero aliquid eveniet soluta natus dolores. Dicta doloremque laudantium quam!
-    </p>
 </div>
 
+<div class="divs-principales row justify-content-around mb-5">
+    <div class="card col-xl-3 col-lg-5 col-8 mb-3">
+
+        <img src="" class="card-img-top" alt="Imagen granola" #imagengranola>
+        <div class="card-body">
+            <h5 class="card-title">Granola</h5>
+            <p class="card-text">A base de avena con frutos secos y frutas deshidratadas</p>
+        </div>
+
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item" #pgranola1>Presentación 1:</li>
+            <li class="list-group-item" #pgranola2>Presentación 2:</li>
+            <li class="list-group-item" #preciogranola>Precio: </li>
+        </ul>
+
+        <div class="d-flex flex-row justify-content-center align-items-center">
+            <ul class="list-group list-group-horizontal">
+                <li class="list-group-item"><i class="fas fa-minus fa-lg"></i></li>
+                <li class="list-group-item"><i class="fas fa-plus fa-lg"></i></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<div class="divs-principales row justify-content-evenly mb-5">
+    <div class="card col-xl-3 col-lg-5 col-8 mb-3">
+
+        <img src="" class="card-img-top" alt="Imagen chocobarra" #imagenchocobarra>
+        <div class="card-body">
+            <h5 class="card-title">Chocobarra</h5>
+            <p class="card-text">Barra de granola con avena, chocochips veganos y fruta deshidratada</p>
+        </div>
+
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item" #preciochocobarra>Precio: </li>
+        </ul>
+
+        <div class="d-flex flex-row justify-content-center align-items-center">
+            <ul class="list-group list-group-horizontal">
+                <li class="list-group-item"><i class="fas fa-minus fa-lg"></i></li>
+                <li class="list-group-item"><i class="fas fa-plus fa-lg"></i></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card col-xl-3 col-lg-5 col-8 mb-3">
+
+        <img src="" class="card-img-top" alt="Imagen completa" #imagencompleta>
+        <div class="card-body">
+            <h5 class="card-title">Completa</h5>
+            <p class="card-text">Barra de granola con avena, frutos secos y fruta deshidratada</p>
+        </div>
+
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item" #preciocompleta>Precio: </li>
+        </ul>
+
+        <div class="d-flex flex-row justify-content-center align-items-center">
+            <ul class="list-group list-group-horizontal">
+                <li class="list-group-item"><i class="fas fa-minus fa-lg"></i></li>
+                <li class="list-group-item"><i class="fas fa-plus fa-lg"></i></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card col-xl-3 col-lg-5 col-8 mb-3">
+
+        <img src="" class="card-img-top" alt="Imagen Triple A" #imagentriplea>
+        <div class="card-body">
+            <h5 class="card-title">Triple A</h5>
+            <p class="card-text">Barra de granola con avena, almendras y arándanos</p>
+        </div>
+
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item" #preciotriplea>Precio: </li>
+        </ul>
+
+        <div class="d-flex flex-row justify-content-center align-items-center">
+            <ul class="list-group list-group-horizontal">
+                <li class="list-group-item"><i class="fas fa-minus fa-lg"></i></li>
+                <li class="list-group-item"><i class="fas fa-plus fa-lg"></i></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<!-- UNTABLES -->
 <div class="divs-principales">
     <h2 class="titulos ms-4 mb-4" #untables>Untables</h2>
-    <p class="parrafos">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Quisquam placeat porro voluptas accusantium obcaecati. At nesciunt, voluptatem incidunt exercitationem temporibus molestias, id quas vitae quae debitis laudantium voluptas aperiam soluta facere omnis commodi mollitia, quis laboriosam adipisci magni. Adipisci voluptatem, rem ex sequi tenetur error corporis sunt officiis temporibus sed nisi ipsa est consectetur beatae nobis, voluptate similique sint quae veritatis architecto exercitationem fuga commodi? Rerum, dolore. Nobis tempora nihil sequi possimus esse dicta quia dolorum vel fugit ex. Minima, rem libero et odit quam qui id consequatur sed cum eius inventore deserunt fugit, commodi culpa praesentium. Nihil quibusdam praesentium maxime sint cumque. Deserunt, velit minus praesentium soluta debitis natus ipsa perferendis sed eaque illo odit deleniti totam aperiam perspiciatis cumque sequi necessitatibus enim maiores quasi facere aut. Perspiciatis, quas ullam? Harum ratione ex et tempora labore adipisci repudiandae nihil laboriosam. Ab explicabo odit nesciunt consequuntur tempora illo culpa voluptates quibusdam impedit, facere, quas vel doloribus accusamus alias vitae hic animi omnis, optio deleniti aliquam eius a illum officia! Nesciunt impedit dolores, possimus ipsa, sunt a cum ut vero explicabo, dolor velit dolorum? Sed eligendi nisi officiis atque ducimus iusto? Libero aliquid eveniet soluta natus dolores. Dicta doloremque laudantium quam!
-    </p>
 </div>
 
+<div class="divs-principales row justify-content-evenly mb-5">
+    <div class="card col-xl-3 col-lg-5 col-8 mb-3">
+
+        <img src="" class="card-img-top" alt="Imagen mantequilla de maní" #imagenuntable>
+        <div class="card-body">
+            <h5 class="card-title">Mantequilla de Maní</h5>
+            <p class="card-text">Mantequilla de maní, hecha 100% de maní natural</p>
+        </div>
+
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item" #puntables1>Presentación 1:</li>
+            <li class="list-group-item" #puntables2>Presentación 2:</li>
+            <li class="list-group-item" #preciountables>Precio: </li>
+        </ul>
+
+        <div class="d-flex flex-row justify-content-center align-items-center">
+            <ul class="list-group list-group-horizontal">
+                <li class="list-group-item"><i class="fas fa-minus fa-lg"></i></li>
+                <li class="list-group-item"><i class="fas fa-plus fa-lg"></i></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+<!-- OTROS -->
 <div class="divs-principales">
     <h2 class="titulos ms-4 mb-4" #otros>Otros</h2>
-    <p class="parrafos">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Quisquam placeat porro voluptas accusantium obcaecati. At nesciunt, voluptatem incidunt exercitationem temporibus molestias, id quas vitae quae debitis laudantium voluptas aperiam soluta facere omnis commodi mollitia, quis laboriosam adipisci magni. Adipisci voluptatem, rem ex sequi tenetur error corporis sunt officiis temporibus sed nisi ipsa est consectetur beatae nobis, voluptate similique sint quae veritatis architecto exercitationem fuga commodi? Rerum, dolore. Nobis tempora nihil sequi possimus esse dicta quia dolorum vel fugit ex. Minima, rem libero et odit quam qui id consequatur sed cum eius inventore deserunt fugit, commodi culpa praesentium. Nihil quibusdam praesentium maxime sint cumque. Deserunt, velit minus praesentium soluta debitis natus ipsa perferendis sed eaque illo odit deleniti totam aperiam perspiciatis cumque sequi necessitatibus enim maiores quasi facere aut. Perspiciatis, quas ullam? Harum ratione ex et tempora labore adipisci repudiandae nihil laboriosam. Ab explicabo odit nesciunt consequuntur tempora illo culpa voluptates quibusdam impedit, facere, quas vel doloribus accusamus alias vitae hic animi omnis, optio deleniti aliquam eius a illum officia! Nesciunt impedit dolores, possimus ipsa, sunt a cum ut vero explicabo, dolor velit dolorum? Sed eligendi nisi officiis atque ducimus iusto? Libero aliquid eveniet soluta natus dolores. Dicta doloremque laudantium quam!
-    </p>
+</div>
+
+<div class="divs-principales row justify-content-evenly mb-5">
+    <div class="card col-xl-3 col-lg-5 col-8 mb-3">
+
+        <img src="" class="card-img-top" alt="Imagen Caja Regalo 1" #imagenotros1>
+        <div class="card-body">
+            <h5 class="card-title">Caja Regalo 1</h5>
+            <p class="card-text">Baileys 375ml, galletas vainilla con almendras, bocaditos maniel, chocodiscos x5</p>
+        </div>
+
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item" #preciootros1>Precio: </li>
+        </ul>
+
+        <div class="d-flex flex-row justify-content-center align-items-center">
+            <ul class="list-group list-group-horizontal">
+                <li class="list-group-item"><i class="fas fa-minus fa-lg"></i></li>
+                <li class="list-group-item"><i class="fas fa-plus fa-lg"></i></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card col-xl-3 col-lg-5 col-8 mb-3">
+
+        <img src="" class="card-img-top" alt="Imagen Caja Regalo 2" #imagenotros2>
+        <div class="card-body">
+            <h5 class="card-title">Caja Regalo 2</h5>
+            <p class="card-text">Galletas vainilla con arándanos, bocaditos surtidos cacao/avenanos, chocodiscos x5</p>
+        </div>
+
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item" #preciootros2>Precio: </li>
+        </ul>
+
+        <div class="d-flex flex-row justify-content-center align-items-center">
+            <ul class="list-group list-group-horizontal">
+                <li class="list-group-item"><i class="fas fa-minus fa-lg"></i></li>
+                <li class="list-group-item"><i class="fas fa-plus fa-lg"></i></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card col-xl-3 col-lg-5 col-8 mb-3">
+
+        <img src="" class="card-img-top" alt="Imagen chocodiscos" #imagenchocodiscos>
+        <div class="card-body">
+            <h5 class="card-title">Chocodiscos</h5>
+            <p class="card-text">Chocolate 58% cacao, frutos secos y frutas deshidratadas</p>
+        </div>
+
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item" #pchocodiscos1>Presentación 1:</li>
+            <li class="list-group-item" #pchocodiscos2>Presentación 2:</li>
+            <li class="list-group-item" #preciochocodiscos>Precio: </li>
+        </ul>
+
+        <div class="d-flex flex-row justify-content-center align-items-center">
+            <ul class="list-group list-group-horizontal">
+                <li class="list-group-item"><i class="fas fa-minus fa-lg"></i></li>
+                <li class="list-group-item"><i class="fas fa-plus fa-lg"></i></li>
+            </ul>
+        </div>
+    </div>
+
 </div>
 
 

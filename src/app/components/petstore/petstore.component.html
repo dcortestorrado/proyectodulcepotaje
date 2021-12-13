@@ -49,11 +49,66 @@
 
 <div class="divs-principales">
     <h2 class="titulos ms-4 mt-2 mb-4">Productos</h2>
-    <h3 class="subtitulos ms-4 mt-2 mb-4">Bolsas</h3>
-    <h3 class="subtitulos ms-4 mt-2 mb-4">Arena Sanitaria</h3>
 </div>
 
-<img src="assets/img/nino_minino.png" class="d-block mx-auto mb-5">
+<div class="divs-principales">
+    <h3 class="subtitulos ms-4 mt-2 mb-5">Bolsas</h3>
+</div>
 
-<!-- <i class="fas fa-plus"></i>
-<i class="fas fa-minus"></i> -->
+<div class="divs-principales row justify-content-center mb-5">
+    <div class="card col-xl-3 col-lg-5 col-8 mb-3">
+
+        <img class="card-img-top" alt="Bolsas compostables" #imagenbolsa>
+        <div class="card-body">
+            <h5 class="card-title fw-bold">Bolsas Compostables</h5>
+            <p class="card-text descripciones">Bolsas a base de maíz para mascotas</p>
+        </div>
+
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item" #pbolsas1 (click)=presentacionBolsa(1)>Presentación 1:</li>
+            <li class="list-group-item" #pbolsas2 (click)=presentacionBolsa(2)>Presentación 2:</li>
+            <li class="list-group-item" #preciobolsa>Precio: </li>
+        </ul>
+
+        <div class="d-flex flex-row justify-content-center align-items-center">
+            <ul class="list-group list-group-horizontal">
+                <li class="list-group-item"><i class="fas fa-minus fa-lg"></i></li>
+                <li class="list-group-item"><i class="fas fa-plus fa-lg"></i></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<div class="divs-principales">
+    <h3 class="subtitulos ms-4 mt-2 mb-5">Arena</h3>
+</div>
+
+<div class="divs-principales row justify-content-evenly my-5">
+    <div class="card col-xl-3 col-lg-5 col-8 mb-3">
+
+        <img src="" class="card-img-top" alt="Arena Sanitaria" #imagenarena>
+        <div class="card-body">
+            <h5 class="card-title fw-bold">Arena Sanitaria</h5>
+            <p class="card-text descripciones">Arena a base de maíz para gatos</p>
+        </div>
+
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item" #parena1 (click)=presentacionArena(1)>Presentación 1:</li>
+            <li class="list-group-item" #parena2  (click)=presentacionArena(2)>Presentación 2:</li>
+            <li class="list-group-item" #parena3  (click)=presentacionArena(3)>Presentación 3:</li>
+            <li class="list-group-item" #precioarena>Precio: </li>
+        </ul>
+
+        <div class="d-flex flex-row justify-content-center align-items-center">
+            <ul class="list-group list-group-horizontal">
+                <li class="list-group-item"><i class="fas fa-minus fa-lg"></i></li>
+                <li class="list-group-item"><i class="fas fa-plus fa-lg"></i></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<img src="assets/img/nino_minino.png" class="d-block mx-auto mb-5 w-25">
+
+

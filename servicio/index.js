@@ -10,8 +10,8 @@ app.use(express.json()); //Habilita la recepción de jsons hacia la API y se vue
 //     res.send('Hola mundo con express. Voy a desarrollar mi API');
 // }) 
 
+app.use('/api/contactos', require('./routes/contactanos'));
+
 app.listen(3001, () =>{
     console.log('Proyecto back ejecutándose');
 })
-
-app.use('/api/contactos', require('./routes/contactanos'));

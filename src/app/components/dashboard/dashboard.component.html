@@ -1,1 +1,51 @@
-<p>dashboard works!</p>
+<div class="divs-principales">
+    <h2 class="titulos ms-4 mb-4">ADMIN</h2>
+
+    <p class="parrafos ms-4 mt-2">Accede a <span class="fw-bold">"Inventario"</span> para actualizar unidades, 
+                                o a <span class="fw-bold">"Mensajes"</span> para ver contactos recientes.
+    </p>   
+
+</div>
+
+<div class="d-flex flex-row justify-content-center my-5">
+    <button type=button class="btn btn-dark btn-lg botones fw-bold" (click)=cambioSeccion(1) #botoninventario>Inventario</button>
+    <button type=button class="btn btn-light btn-lg botones fw-bold" (click)=cambioSeccion(2) #botonmensajes>Mensajes</button>
+</div>
+
+<!--Sección Inventario-->
+<div class="divs-principales" #divinventario>
+    <table class="table table-success table-striped table-hover">
+        
+        <thead>
+            <tr>
+                <th scope="col" class="text-center">Producto</th>
+                <th scope="col" class="text-center">Presentación</th>
+                <th scope="col" class="text-center">Cantidad</th>
+                <th scope="col" class="text-center">Agregar/Quitar</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr class="text-center">
+                <th scope="row">Nombre Pr.</th>
+                <td colspan="1 ">Prstcn</td>
+                <td colspan="1 ">Número</td>
+                <td>
+                    <ul class="list-group list-group-horizontal d-flex justify-content-center">
+                    <li class="list-group-item me-2"><i class="fas fa-minus fa-lg"></i></li>
+                    <li class="list-group-item"><i class="fas fa-plus fa-lg"></i></li>
+                    </ul>
+                </td>
+                
+            </tr>
+        </tbody>
+        
+    </table>
+</div>
+
+<!--Sección Mensajes-->
+<div class="divs-principales parrafos ms-4 mt-2 clase-quitar" #divmensajes>
+    <p>HOLAAAAAA</p>
+</div>
+

@@ -18,24 +18,24 @@
                 <ul class="navbar-nav mb-2 mb-lg-0 align-items-center">
 
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" routerLink="">Home</a>
+                        <a class="nav-link active" routerLink="" #home (click)="cambio('home')">Home</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" routerLink="potajes">Potajes</a>
+                        <a class="nav-link" routerLink="potajes" #potajes (click)="cambio('potajes')">Potajes</a>
                     </li>
     
                     <li class="nav-item">
-                        <a class="nav-link" routerLink="acercade">Acerca de</a>
+                        <a class="nav-link" routerLink="acercade" #acercade (click)="cambio('acercade')">Acerca de</a>
                     </li>
     
     
                     <li class="nav-item">
-                        <a class="nav-link" routerLink="petstore">Pet Store</a>
+                        <a class="nav-link" routerLink="petstore" #petstore (click)="cambio('petstore')">Pet Store</a>
                     </li>
     
                     <li class="nav-item">
-                        <a class="nav-link text-start" routerLink="contactanos">Contáctanos</a>
+                        <a class="nav-link text-start" routerLink="contactanos" #contactanos (click)="cambio('contactanos')">Contáctanos</a>
                     </li>
 
                     <li class="nav-item">
