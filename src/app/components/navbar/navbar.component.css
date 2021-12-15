@@ -4,7 +4,7 @@
     background-color: #6fcaca;
 }
 
-.container-fluid {
+.container-fluid, .container {
     font-family: 'Cinzel', serif;
     font-size: 25px; 
     font-weight: 500;
@@ -45,4 +45,24 @@ li {
 
 .nav-item:hover{
     background-color: #d7efef;
+}
+
+.circulo-scroll{
+    position: fixed;
+    right: 3%;
+    bottom: 3%;
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+    opacity: 0.5;
+    background-color: #a9ff13;
+}
+
+.circulo-scroll:hover{
+    cursor: pointer;
+}
+
+.ovni{
+    width: 90%;
+    height: 90%;
 }

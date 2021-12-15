@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const ContactoSchema = mongoose.Schema({
+const CrearcuentaSchema = mongoose.Schema({
     nombre:{
         type: String,
         required: true
@@ -9,11 +9,7 @@ const ContactoSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    telefono:{
-        type: Number,
-        required: true
-    },
-    mensaje:{
+    contrasena:{
         type: String,
         required: true
     },
@@ -23,4 +19,4 @@ const ContactoSchema = mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('Contacto', ContactoSchema); 
+module.exports = mongoose.model('Crearcuenta', CrearcuentaSchema);

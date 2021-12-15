@@ -17,6 +17,7 @@ export class PetstoreComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  setTimeout(() =>{
     const bolsa = this.img_bolsa?.nativeElement;
     console.log(bolsa);
     const arena = this.img_arena?.nativeElement;
@@ -25,6 +26,7 @@ export class PetstoreComponent implements OnInit {
     let imagenarena = imagenesPetstore.arenas[0];
     this.renderer2.setAttribute(bolsa, 'src', imagenbolsa);
     this.renderer2.setAttribute(arena, 'src', imagenarena);
+  }, 500);
 }
   
   presentacionBolsa(arg: number){

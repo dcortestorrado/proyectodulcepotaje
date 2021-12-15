@@ -1,10 +1,8 @@
 const express = require('express');
-const router = express.Router; // Para determinar si va por post, put, get, etc...
+const router = express.Router(); // Para determinar si va por post, put, get, etc...
+const inventarioController = require('../controllers/inventarioController'); //requerimiento del controlador
 
-router.get('/', (req, res) => {
-    res.send('Hola mundo con express. Voy a desarrollar mi API');
-}) 
+router.get('/', inventarioController.obtenerInventario);
+router.get('/:id', inventarioController.obtenerProducto);
 
-router.post('/', () => {
-    console.log('Creando el contacto/producto'); //Ejemplo
-})
+module.exports = router;

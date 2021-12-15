@@ -8,17 +8,19 @@
 </div>
 
 <div class="d-flex flex-row justify-content-center my-5">
-    <button type=button class="btn btn-dark btn-lg botones fw-bold" (click)=cambioSeccion(1) #botoninventario>Inventario</button>
-    <button type=button class="btn btn-light btn-lg botones fw-bold" (click)=cambioSeccion(2) #botonmensajes>Mensajes</button>
+    <button type=button class="btn btn-dark btn-lg botones fw-bold me-5" (click)=cambioSeccion(1) #botoninventario>Inventario</button>
+    <button type=button class="btn btn-light btn-lg botones fw-bold me-5" (click)=cambioSeccion(2) #botonmensajes>Mensajes</button>
+    <button type=button class="btn btn-light btn-lg botones fw-bold" (click)=cambioSeccion(3) #botoncuentas>Cuentas</button>
 </div>
 
 <!--Sección Inventario-->
-<div class="divs-principales" #divinventario>
-    <table class="table table-success table-striped table-hover">
+<div class="divs-principales parrafos" #divinventario>
+    <table *ngIf="listaInventario.length > 0"class="table table-responsive table-success table-striped table-hover mb-5">
         
         <thead>
             <tr>
                 <th scope="col" class="text-center">Producto</th>
+                <th scope="col" class="text-center">Categoría</th>
                 <th scope="col" class="text-center">Presentación</th>
                 <th scope="col" class="text-center">Cantidad</th>
                 <th scope="col" class="text-center">Agregar/Quitar</th>
@@ -27,10 +29,11 @@
 
         <tbody>
 
-            <tr class="text-center">
-                <th scope="row">Nombre Pr.</th>
-                <td colspan="1 ">Prstcn</td>
-                <td colspan="1 ">Número</td>
+            <tr *ngFor="let inventario of listaInventario; let i = index" class="text-center">
+                <td colspan="1">{{inventario.nombre_producto}}</td>
+                <td colspan="1 ">{{inventario.categoria}}</td>
+                <!-- <td *ngFor="let presentaciones of inventario.data_producto; let j = index" colspan="1 ">{{presentaciones[j]}}</td> -->
+                <!-- <td colspan="1 ">{{inventario.categoria}}</td> -->
                 <td>
                     <ul class="list-group list-group-horizontal d-flex justify-content-center">
                     <li class="list-group-item me-2"><i class="fas fa-minus fa-lg"></i></li>
@@ -45,7 +48,79 @@
 </div>
 
 <!--Sección Mensajes-->
-<div class="divs-principales parrafos ms-4 mt-2 clase-quitar" #divmensajes>
-    <p>HOLAAAAAA</p>
+<div class="parrafos mt-2 w-75 mx-auto clase-quitar" #divmensajes>
+
+        <div>
+            <table *ngIf="listaContactos.length > 0" class="table table-responsive table-success table-striped table-hover mx-auto mb-5">
+            
+                <thead>
+                    <tr>
+                        <th scope="col" class="text-center">Nombre</th>
+                        <th scope="col" class="text-center">Correo</th>
+                        <th scope="col" class="text-center">Teléfono</th>
+                        <th scope="col" colspan="2" class="text-center">Mensaje</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let contacto of listaContactos" class="text-center">
+            
+                        <td colspan="1">{{contacto.nombre}}</td>
+                        <td colspan="1">{{contacto.correo}}</td>
+                        <td colspan="1">{{contacto.telefono}}</td>
+                        <td colspan="1">{{contacto.mensaje}}</td>
+                        <td>
+                            <ul class="list-group list-group-horizontal d-flex justify-content-center">
+                                <li class="list-group-item me-2"><i (click)="eliminarContacto(contacto._id)" class="fas fa-trash-alt fa-lg" ></i></li>
+                            </ul>
+                        </td>
+            
+                    </tr>
+                </tbody>
+            
+            </table>
+        </div>
+</div>
+
+
+<!--Sección Cuentas de usuario-->
+<div class="parrafos mt-2 w-75 mx-auto clase-quitar" #divcuentas>
+
+    <div>
+        <table *ngIf="listaCuentas.length > 0"class="table table-success table-striped table-hover mx-auto mb-5">
+            
+            <thead>
+                <tr>
+                    <th scope="col" class="text-center">Nombre</th>
+                    <th scope="col" class="text-center">Correo</th>
+                    <th scope="col" class="text-center">Actualizar datos</th>
+                    <th scope="col" class="text-center">Eliminar cuenta</th>
+                </tr>
+            </thead>
+    
+            <tbody>
+    
+                <tr *ngFor="let cuenta of listaCuentas" class="text-center">
+                    
+                    <th><input type="text" readonly value="{{cuenta.nombre}}"><i class="far fa-edit fa-lg ms-2"></i></th>
+                    <td colspan="1 "><input type="text" readonly value="{{cuenta.correo}}"><i class="far fa-edit fa-lg ms-2"></i></td>
+
+                    <td>
+                        <ul class="list-group list-group-horizontal d-flex justify-content-center">
+                            <li class="list-group-item me-2"><i (click)="eliminarCuenta(cuenta._id)" class="fas fa-check fa-lg"></i></li>
+                        </ul>
+                    </td>
+
+                    <td>
+                        <ul class="list-group list-group-horizontal d-flex justify-content-center">
+                            <li class="list-group-item me-2"><i (click)="eliminarCuenta(cuenta._id)" class="fas fa-trash-alt fa-lg"></i></li>
+                        </ul>
+                    </td>
+            
+                </tr>
+
+            </tbody>
+            
+        </table>
+    </div>
 </div>
 

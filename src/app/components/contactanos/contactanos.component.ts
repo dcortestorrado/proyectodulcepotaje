@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Contactanos } from 'src/app/models/contactanos';
 import { Router } from '@angular/router'; /* nos permite cuadrar la navegación que tiene nuestro usuario después de completar alguna acción */
 import Swal from 'sweetalert2'; /*Aquí importamos Swalert*/
+import { ContactanosService } from 'src/app/services/contactanos.service';
 
 @Component({
   selector: 'app-contactanos',
@@ -14,7 +15,7 @@ export class ContactanosComponent implements OnInit {
     contactanosForm: FormGroup;
     valorNumerico = /^[0-9]+$/;
 
-  constructor(private fb: FormBuilder, private router: Router) { /* Acá también hay que declarar router */
+  constructor(private fb: FormBuilder, private router: Router, private _contactanosService: ContactanosService) { /* Acá también hay que declarar router */
       this.contactanosForm = this.fb.group({
         nombreContacto: ['', Validators.required],
         correoContacto: ['', [Validators.required, Validators.email]],
@@ -27,7 +28,6 @@ export class ContactanosComponent implements OnInit {
   }
 
   guardarMensaje(){
-    console.log(this.contactanosForm.get('nombreContacto')?.value);
 
     const CONTACTO: Contactanos = {
 
@@ -38,13 +38,17 @@ export class ContactanosComponent implements OnInit {
     }
 
     console.log(CONTACTO);
-    this.router.navigate(['']);
-    Swal.fire({
-      title: 'Mensaje Enviado',
-      text: "Pronto te contactaremos.",
-      icon: 'success',
-      confirmButtonText: 'OK'
-    })
+    this._contactanosService.postContacto(CONTACTO).subscribe(data =>{
+      this.router.navigate(['']);
+      Swal.fire({
+        title: 'Mensaje Enviado',
+        text: "Pronto te contactaremos.",
+        icon: 'success',
+        confirmButtonText: 'OK'
+      })
+    }, error => {
+      console.log(error);
+    });
   }
 
 }

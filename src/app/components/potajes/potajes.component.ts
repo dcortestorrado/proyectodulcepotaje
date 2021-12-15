@@ -32,7 +32,7 @@ export class PotajesComponent implements OnInit {
   constructor(private renderer2: Renderer2) { }
 
   ngOnInit(): void {
-
+  setTimeout(() =>{
     const avenanas = this.img_avenanas?.nativeElement;
     const banani = this.img_banani?.nativeElement;
     const browneta = this.img_browneta?.nativeElement;
@@ -55,7 +55,8 @@ export class PotajesComponent implements OnInit {
 
     const arregloGranolas = [granola, chocobarra, completa, triplea];
 
-    const arregloUntables = [this.img_untable?.nativeElement];
+    const mantequilla = this.img_untable?.nativeElement
+    const arregloUntables = [mantequilla];
 
     const otros1 = this.img_otros1?.nativeElement;
     const otros2 = this.img_otros2?.nativeElement;
@@ -64,10 +65,46 @@ export class PotajesComponent implements OnInit {
     const arregloOtros = [otros1, otros2, chocodiscos];
 
     console.log(imagenesPotajes.galletas[0]);
-    
-    this.renderer2.setAttribute(avenanas, 'src', imagenesPotajes.galletas[0]);
-    
+
+    arregloGalletas.forEach((galleta, i) => {
+      this.renderer2.setAttribute(galleta, 'src', imagenesPotajes.galletas[i]);
+    });
+
+    arregloBocaditos.forEach((bocadito, i) => {
+      this.renderer2.setAttribute(bocadito, 'src', imagenesPotajes.bocaditos[i]);
+    });
+
+    arregloGranolas.forEach((granola, i) => {
+      this.renderer2.setAttribute(granola, 'src', imagenesPotajes.granolas[i]);
+    });
+
+    arregloUntables.forEach((untable, i) => {
+      this.renderer2.setAttribute(untable, 'src', imagenesPotajes.untables[i]);
+    });
+
+    arregloOtros.forEach((otro, i) => {
+      this.renderer2.setAttribute(otro, 'src', imagenesPotajes.otros[i]);
+    });
+
+  }, 1000)
+  
+      
   }
+
+  presentacionmantequilla(arg: number){
+    const mantequilla = this.img_untable?.nativeElement;
+    let imagenmantequilla = "";
+
+    if (arg == 1){
+      imagenmantequilla = imagenesPotajes.untables[0];
+    } else {
+      imagenmantequilla = imagenesPotajes.untables[1];
+    }
+
+    this.renderer2.setAttribute(mantequilla, 'src', imagenmantequilla);
+  }  
+    
+    
 
   scrollToElement(elemento: any){
     // console.log(elemento);
@@ -77,6 +114,7 @@ export class PotajesComponent implements OnInit {
       inline: "nearest"
 
     }) //Salta a alias, asignados en el HTML
-  }
+}
 
 }
+

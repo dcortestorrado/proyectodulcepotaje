@@ -20,7 +20,6 @@ export class NavbarComponent implements OnInit {
   }
 
   cambio(ul_pagina: string){
-    let nav_actual = "";
     const ul_home = this.nav_home?.nativeElement; //nativeElement -> Elemento del HTML
     const ul_potajes = this.nav_potajes?.nativeElement; 
     const ul_acercade = this.nav_acercade?.nativeElement;
@@ -50,4 +49,9 @@ export class NavbarComponent implements OnInit {
         break;
     }
   }
+
+  scrollTop(){
+    window.scroll(0,0);
+  }
+  
 }

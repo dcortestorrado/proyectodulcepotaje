@@ -27,7 +27,7 @@
 }
 
 .clase-quitar{
-    display: none;
+    display: none !important;
 }
 
 i:hover, .list-group-item:hover {
