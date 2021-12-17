@@ -48,3 +48,16 @@ li:hover{
     font-family: 'Montserrat', sans-serif;
 }
 
+.clase-quitar{
+    display: none;
+}
+
+.btn-presentacion{
+    font-weight: bold;
+    outline: transparent #000000;
+    border-radius: 10px;
+    background-color: #6fcaca;
+    margin-right: 5px;
+    padding: 8px;
+}
+

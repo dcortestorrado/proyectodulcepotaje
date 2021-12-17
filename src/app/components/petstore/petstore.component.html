@@ -60,20 +60,20 @@
 
         <img class="card-img-top" alt="Bolsas compostables" #imagenbolsa>
         <div class="card-body">
-            <h5 class="card-title fw-bold">Bolsas Compostables</h5>
+            <h5 class="card-title fw-bold" #bolsas>Bolsas Compostables</h5>
             <p class="card-text descripciones">Bolsas a base de maíz para mascotas</p>
         </div>
 
         <ul class="list-group list-group-flush">
-            <li class="list-group-item" #pbolsas1 (click)=presentacionBolsa(1)>Presentación 1:</li>
-            <li class="list-group-item" #pbolsas2 (click)=presentacionBolsa(2)>Presentación 2:</li>
-            <li class="list-group-item" #preciobolsa>Precio: </li>
+            <li class="list-group-item fw-bold"><button type="button" class="btn-presentacion" (click)=presentacionBolsa(1)>Presentación 1</button><span class="fw-normal" #pbolsas1> x30</span></li>
+            <li class="list-group-item fw-bold"><button type="button" class="btn-presentacion" (click)=presentacionBolsa(2)>Presentación 2</button><span class="fw-normal" #pbolsas2> x60</span></li>
+            <li class="list-group-item fw-bold">Precio: $<span class="fw-normal" #preciobolsas1>5500</span><span class="fw-normal clase-quitar" #preciobolsas2>10000</span></li>
         </ul>
 
         <div class="d-flex flex-row justify-content-center align-items-center">
             <ul class="list-group list-group-horizontal">
-                <li class="list-group-item"><i class="fas fa-minus fa-lg"></i></li>
-                <li class="list-group-item"><i class="fas fa-plus fa-lg"></i></li>
+                <li class="list-group-item"><i class="fas fa-minus fa-lg" (click)="bolsasStorage(1)"></i></li>
+                <li class="list-group-item"><i class="fas fa-plus fa-lg" (click)="bolsasStorage(2)"></i></li>
             </ul>
         </div>
     </div>
@@ -81,7 +81,7 @@
 </div>
 
 <div class="divs-principales">
-    <h3 class="subtitulos ms-4 mt-2 mb-5">Arena</h3>
+    <h3 class="subtitulos ms-4 mt-2 mb-5" #arena>Arena</h3>
 </div>
 
 <div class="divs-principales row justify-content-evenly my-5">
@@ -89,21 +89,21 @@
 
         <img src="" class="card-img-top" alt="Arena Sanitaria" #imagenarena>
         <div class="card-body">
-            <h5 class="card-title fw-bold">Arena Sanitaria</h5>
+            <h5 class="card-title fw-bold" #arena>Arena Sanitaria</h5>
             <p class="card-text descripciones">Arena a base de maíz para gatos</p>
         </div>
 
         <ul class="list-group list-group-flush">
-            <li class="list-group-item" #parena1 (click)=presentacionArena(1)>Presentación 1:</li>
-            <li class="list-group-item" #parena2  (click)=presentacionArena(2)>Presentación 2:</li>
-            <li class="list-group-item" #parena3  (click)=presentacionArena(3)>Presentación 3:</li>
-            <li class="list-group-item" #precioarena>Precio: </li>
+            <li class="list-group-item fw-bold"><button type="button" class="btn-presentacion" (click)=presentacionArena(1)>Presentación 1</button><span class="fw-normal" #parena1> 2,27kg</span></li>
+            <li class="list-group-item fw-bold"><button type="button" class="btn-presentacion" (click)=presentacionArena(2)>Presentación 2</button><span class="fw-normal" #parena2> 4,5kg</span></li>
+            <li class="list-group-item fw-bold"><button type="button" class="btn-presentacion" (click)=presentacionArena(3)>Presentación 3</button><span class="fw-normal" #parena3> 7,7kg</span></li>
+            <li class="list-group-item fw-bold">Precio: $<span class="fw-normal" #precioarena1>26000</span><span class="fw-normal clase-quitar" #precioarena2>49500</span><span class="fw-normal clase-quitar" #precioarena3>67000</span></li>
         </ul>
 
         <div class="d-flex flex-row justify-content-center align-items-center">
             <ul class="list-group list-group-horizontal">
-                <li class="list-group-item"><i class="fas fa-minus fa-lg"></i></li>
-                <li class="list-group-item"><i class="fas fa-plus fa-lg"></i></li>
+                <li class="list-group-item" (click)="arenasStorage(1)"><i class="fas fa-minus fa-lg" ></i></li>
+                <li class="list-group-item" (click)="arenasStorage(2)"><i class="fas fa-plus fa-lg"></i></li>
             </ul>
         </div>
     </div>

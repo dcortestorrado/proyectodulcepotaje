@@ -1,5 +1,6 @@
 import { Component, OnInit, Renderer2, ElementRef, ViewChild  } from '@angular/core';
 import { Router } from '@angular/router';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 import { Contactanos } from 'src/app/models/contactanos';
 import { ContactanosService } from 'src/app/services/contactanos.service';
@@ -18,6 +19,7 @@ import Swal from 'sweetalert2';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  actualizarForm: FormGroup;
 
   @ViewChild('divinventario') div_inventario?: ElementRef;
   @ViewChild('divmensajes') div_mensajes?: ElementRef;
@@ -27,11 +29,25 @@ export class DashboardComponent implements OnInit {
   @ViewChild('botonmensajes') boton_mensajes?: ElementRef;
   @ViewChild('botoncuentas') boton_cuentas?: ElementRef;
 
-  constructor(private renderer2: Renderer2, private _contactanosService: ContactanosService, private _inventarioService: InventarioService, private _crearcuentaService: CrearcuentaService, private router: Router) { }
+  constructor(private renderer2: Renderer2, 
+              private _contactanosService: ContactanosService, 
+              private _inventarioService: InventarioService, 
+              private _crearcuentaService: CrearcuentaService, 
+              private router: Router,
+              private fb: FormBuilder) { 
+                this.actualizarForm = this.fb.group({
+                  nombreCrear: ['', Validators.required],
+                  correoCrear: ['', [Validators.required, Validators.email]],
+                });
+              }
 
   listaContactos: Contactanos[] = [];
   listaInventario: Inventario[] = [];
   listaCuentas: Crear[] = [];
+  cuenta: any; 
+  data_p: any;
+  id: any;
+  url: any;
   
   ngOnInit(): void {
     this.obtenerContactos();
@@ -52,6 +68,7 @@ export class DashboardComponent implements OnInit {
     this._inventarioService.getInventario().subscribe(data =>{
       console.log(data);
       this.listaInventario = data;
+      this.data_p = this.listaInventario;
     }, error => {
       console.log(error);
     });
@@ -133,11 +150,12 @@ export class DashboardComponent implements OnInit {
             showConfirmButton: false,
             timer: 2000
           })
+          this.router.navigate(['admin']);
+          this.obtenerContactos();
         }, error => {
           console.log(error);
         })
       };
-      this.obtenerContactos();
     })  
   }
 
@@ -154,36 +172,32 @@ export class DashboardComponent implements OnInit {
       if (resultado.isConfirmed){
         this._crearcuentaService.deleteCuenta(id).subscribe(data => {
           Swal.fire({
-            title: 'Mensaje eliminado',
+            title: 'Cuenta eliminada',
             icon: 'success',
             showConfirmButton: false,
             timer: 2000
           })
+          this.router.navigate(['admin']);
+          this.obtenerCuentas();
         }, error => {
           console.log(error);
         })
       };
-      this.obtenerContactos();
     })
   }
+  traerCuenta(id: any){
 
-  // actualizarCuenta(){
-  //   if (this.id !== null){
-  //     //se edita
-  //     this._crearcuentaService.putCuenta(this.id, CREAR).subscribe(data =>{
-  //       console.log(data);
-  //       Swal.fire({
-  //         title: 'Cuenta eliminada',
-  //         icon: 'success',
-  //         showConfirmButton: false,
-  //         timer: 2000
-  //       })
-  //       this.router.navigate(['/admin']);
-  //     }, error => {
-  //       console.log(error)
-  //     })
-  //   } else {
-  //     process.exit(1);
-  //   }
-  // }
+    let idCuenta = id;
+    this._crearcuentaService.getCuenta(idCuenta).subscribe(data =>{
+      this.cuenta = data;
+      console.log(data);
+    });
+  }
+
+  actualizarCuenta(id: any){
+    console.log(this.cuenta.nombre);
+    
+  }
+
+
 }

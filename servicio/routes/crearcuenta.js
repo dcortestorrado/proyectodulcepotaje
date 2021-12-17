@@ -6,6 +6,7 @@ router.get('/', crearcuentaController.obtenerCuentas);
 router.get('/:id', crearcuentaController.obtenerCuenta);
 
 router.post('/', crearcuentaController.crearCuenta);
+router.delete('/:id', crearcuentaController.borrarCuenta);
 
 // router.post('/', crearcuentaController.crearContacto); //Ojo con el método. Crear es POST.
 

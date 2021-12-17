@@ -40,3 +40,17 @@ exports.obtenerCuenta = async(req, res) => {
     }
     
 }
+
+exports.borrarCuenta = async(req, res) =>{
+    try{
+        let cuenta = await Crearcuenta.findById(req.params.id); //-> Método de mongoose para buscar por id. Hay más métodos (mongoose queries). Revisa el parámetro id del request.
+        if(!cuenta){
+            res.status(404).json({ error: "Esa cuenta no existe"});//Estado 404 porque es el correspondiente a not found. Se muestra en front.
+        } 
+        await Crearcuenta.findOneAndRemove({_id: req.params.id});
+        res.json({msg: 'La cuenta ha sido eliminada'});
+    } catch(error) {
+        console.log(error);
+        res.status(500).send('Lo sentimos, ocurrió un error. Inténtalo de nuevo.')
+    }
+}

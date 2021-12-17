@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Crear } from '../models/crearcuenta';
+import { Patch } from '../models/patch';
 
 @Injectable({
   providedIn: 'root'
@@ -33,10 +34,11 @@ export class CrearcuentaService {
   putCuenta(id: String, cuenta: Crear): Observable<any>{
     return this.http.put(this.url + id, cuenta);
   }
+
+  patchCuenta(id: String, parche: Patch): Observable<any>{
+    return this.http.patch(this.url + id, parche);
+  }
 }
-
-
-
 
 
 

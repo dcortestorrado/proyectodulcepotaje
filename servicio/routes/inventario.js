@@ -5,4 +5,6 @@ const inventarioController = require('../controllers/inventarioController'); //r
 router.get('/', inventarioController.obtenerInventario);
 router.get('/:id', inventarioController.obtenerProducto);
 
+router.post('/', inventarioController.crearProducto);
+
 module.exports = router;

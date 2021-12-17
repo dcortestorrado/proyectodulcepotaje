@@ -14,7 +14,7 @@ app.use(express.json()); //Habilita la recepción de jsons hacia la API y se vue
 
 app.use('/api/contactos/', require('./routes/contactanos'));
 app.use('/api/cuentas/', require('./routes/crearcuenta'));
-app.use('/api/inventario/', require ('./routes/inventario'))
+app.use('/api/inventario/', require ('./routes/inventario'));
 
 
 app.listen(3001, () =>{

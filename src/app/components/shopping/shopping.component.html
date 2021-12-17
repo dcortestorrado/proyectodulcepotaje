@@ -2,40 +2,102 @@
     <h2 class="titulos ms-4 mb-4">Mi Carrito</h2>
 </div>
 
-<div class="row d-flex flex-row justify-content-center align-items-center">
-    <!-- Div donde aparecen los artículos -->
-    <div class="col-6 divs-principales">
+<div class="row d-flex flex-row justify-content-center align-items-center mb-5">   
 
-    </div>
-    
     <!-- Div donde aparece la cuenta -->
-    <div class="col-3 contenedor-cuenta">
+    <div class="col-xl-5 col-lg-7 col-md-8 col-8 contenedor-cuenta">
 
-        <h3 class="subtitulos mb-3 text-center">RESUMEN DE MI COMPRA</h3>
+        <h3 class="subtitulos text-center mb-5 fw-bold">RESUMEN DE TU COMPRA</h3>
 
-        <div class="d-flex flex-row justify-content-between">
-            <p class="parrafos">Subtotal</p>
-            <p class="parrafos" id="sumaprecios">20000</p>
+        <div>
+            <h3></h3>
+        </div>
+
+        <div *ngIf="arregloBolsas.length > 0">
+            <div *ngFor="let producto of arregloBolsas" class="d-flex flex-column mb-3">
+                <h4 class="mb-5 text-start">{{producto?.articulo}}</h4>
+                <div *ngFor="let info of producto?.info" class="row justify-content-between">
+                <div class="col-3">
+                    <p class="parrafos text-start">{{info?.presentacion}}</p>
+                </div>
+                <div class="col-3">
+                    <p class="parrafos text-end">{{info?.cantidad}}</p>
+                </div>
+                <div class="col-3">
+                    <p class="parrafos text-end">{{info?.precio}}</p>
+                </div>
+                <div class="col-3">
+                    <p class="parrafos text-end fw-bold" #stbolsas></p>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="arregloArena.length > 0">
+            <div *ngFor="let producto of arregloArena" class="d-flex flex-column mb-3">
+                <h4 class="mb-5 text-start">{{producto!.articulo}}</h4>
+                <div *ngFor="let info of producto?.info" class="row justify-content-between">
+                <div class="col-3">
+                    <p class="parrafos text-start">{{info!.presentacion}}</p>
+                </div>
+                <div class="col-3">
+                    <p class="parrafos text-end">{{info!.cantidad}}</p>
+                </div>
+                <div class="col-3">
+                    <p class="parrafos text-end">{{info!.precio}}</p>
+                </div>
+                <div class="col-3">
+                    <p class="parrafos text-end fw-bold" #starena></p>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="arregloBocaditos.length > 0">
+            <div *ngFor="let producto of arregloBocaditos; index as i" class="d-flex flex-column mb-3">
+                <h4 class="mb-5 text-start">{{producto!.articulo}}</h4>
+                <div *ngFor="let info of producto?.info" class="row">
+                    
+                    <div class="col-3">
+                        <p class="parrafos text-start">{{info!.presentacion}}</p>
+                    </div>
+                    <div class="col-3">
+                        <p class="parrafos text-end">{{info!.cantidad}}</p>
+                    </div>
+                    <div class="col-3">
+                        <p class="parrafos text-end">{{info!.precio}}</p>
+                    </div>
+                    <div class="col-3">
+                        <p class="parrafos text-end fw-bold" #stbocaditos></p>
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+        <div class="d-flex flex-row justify-content-between mt-5">
+            <p class="parrafos fw-bold">Subtotal</p>
+            <p class="parrafos fw-bold" #subtotal></p>
         </div>
 
         <div class="d-flex flex-row justify-content-between">
-            <p class="parrafos">Envío</p>
-            <p class="parrafos" id="envio">6000</p>
+            <p class="parrafos fw-bold">Envío</p>
+            <p class="parrafos">6000</p>
         </div>
 
         <div class="caja-total d-flex flex-row justify-content-between">
             <h3 class="total-titulo my-3">TOTAL</h3>
-            <p class="parrafos my-3 fw-bold" id="total">6000</p>
+            <p class="parrafos total my-3 fw-bold" #total></p>
         </div>
 
-        <button type="button" class="btn btn-secondary fw-bold">PAGAR</button>
+        <button type="button" class="btn btn-secondary fw-bold" (click)="pagar()">PAGAR</button>
     </div>
 
 </div>
 
-<div class="divs-principales mt-5 caja-aviso">
-    <h3 class="subtitulos ms-4">AVISO:</h3>
-    <p class="parrafos ms-4">Contamos con envío a Bogotá, Cajicá, Chía y Zipaquirá por un valor de $ 6.000.</p>
-    <p class="parrafos ms-4">El pedido llegará a su destino al siguiente día de ser realizado.</p>
+<div class="divs-principales my-5 caja-aviso d-flex flex-column justify-content-center">
+    <h3 class="subtitulos ms-4 text-center">AVISO:</h3>
+    <p class="parrafos ms-4 text-center">Contamos con envío a Bogotá, Cajicá, Chía y Zipaquirá por un valor de $ 6.000.</p>
+    <p class="parrafos ms-4 text-center">El pedido llegará a su destino al siguiente día de ser realizado.</p>
 </div>
+
 

@@ -15,7 +15,7 @@
 
 <!--Sección Inventario-->
 <div class="divs-principales parrafos" #divinventario>
-    <table *ngIf="listaInventario.length > 0"class="table table-responsive table-success table-striped table-hover mb-5">
+    <table *ngIf="listaInventario.length > 0" class="table table-responsive table-success table-striped table-hover mb-5">
         
         <thead>
             <tr>
@@ -29,16 +29,18 @@
 
         <tbody>
 
-            <tr *ngFor="let inventario of listaInventario; let i = index" class="text-center">
-                <td colspan="1">{{inventario.nombre_producto}}</td>
-                <td colspan="1 ">{{inventario.categoria}}</td>
-                <!-- <td *ngFor="let presentaciones of inventario.data_producto; let j = index" colspan="1 ">{{presentaciones[j]}}</td> -->
-                <!-- <td colspan="1 ">{{inventario.categoria}}</td> -->
+            <tr *ngFor="let inventario of data_p" class="text-center">
+                <td>{{inventario.nombre_producto}}</td>
+                <td>{{inventario.categoria}}</td>
+                <td><div class="d-flex flex-column justify-content-center align-items-center m-0 p-0"><div *ngFor="let presentaciones of inventario.data_producto">{{presentaciones.presentacion}}</div></div></td>
+                <td><div *ngFor="let presentaciones of inventario.data_producto">{{presentaciones.cantidad}}</div></td>
                 <td>
-                    <ul class="list-group list-group-horizontal d-flex justify-content-center">
-                    <li class="list-group-item me-2"><i class="fas fa-minus fa-lg"></i></li>
-                    <li class="list-group-item"><i class="fas fa-plus fa-lg"></i></li>
-                    </ul>
+                    <div *ngFor="let presentaciones of inventario.data_producto">{{presentaciones.length}}
+                        <ul class="list-group list-group-horizontal d-flex justify-content-center">
+                            <li class="list-group-item me-2"><i class="far fa-edit fa-lg"></i></li>
+                            <li class="list-group-item"><i class="fas fa-check fa-lg"></i></li>
+                        </ul>
+                    </div>
                 </td>
                 
             </tr>
@@ -101,18 +103,20 @@
     
                 <tr *ngFor="let cuenta of listaCuentas" class="text-center">
                     
-                    <th><input type="text" readonly value="{{cuenta.nombre}}"><i class="far fa-edit fa-lg ms-2"></i></th>
-                    <td colspan="1 "><input type="text" readonly value="{{cuenta.correo}}"><i class="far fa-edit fa-lg ms-2"></i></td>
-
+                    <td><input type="text" value="{{cuenta.nombre}}"></td>
+                    <td><input type="text" value="{{cuenta.correo}}"></td>
+                    
                     <td>
                         <ul class="list-group list-group-horizontal d-flex justify-content-center">
-                            <li class="list-group-item me-2"><i (click)="eliminarCuenta(cuenta._id)" class="fas fa-check fa-lg"></i></li>
+                            <li class="list-group-item me-5" (click)="traerCuenta(cuenta._id)"><i class="far fa-edit fa-lg"></i></li>
+                            <li class="list-group-item" (click)="actualizarCuenta(cuenta._id)"><i class="fas fa-check fa-lg"></i></li>
                         </ul>
                     </td>
 
                     <td>
                         <ul class="list-group list-group-horizontal d-flex justify-content-center">
                             <li class="list-group-item me-2"><i (click)="eliminarCuenta(cuenta._id)" class="fas fa-trash-alt fa-lg"></i></li>
+
                         </ul>
                     </td>
             

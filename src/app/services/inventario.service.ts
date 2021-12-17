@@ -17,7 +17,10 @@ export class InventarioService {
   getInventario(): Observable<any>{
     return this.http.get(this.url);
   }
-
+  
+  postProducto(producto: Inventario): Observable<any>{
+    return this.http.post(this.url, producto);
+  }
 }
 
 
